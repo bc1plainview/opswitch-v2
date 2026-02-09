@@ -1,0 +1,316 @@
+{
+    "functions": [
+        {
+            "name": "createSwitch",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "beneficiary",
+                    "type": "ADDRESS"
+                },
+                {
+                    "name": "interval",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "gracePeriod",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "switchId",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "checkin",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "switchId",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "success",
+                    "type": "BOOL"
+                }
+            ]
+        },
+        {
+            "name": "storeData",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "switchId",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "chunkIndex",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "encryptedData",
+                    "type": "BYTES"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "success",
+                    "type": "BOOL"
+                }
+            ]
+        },
+        {
+            "name": "storeDecryptionKey",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "switchId",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "encryptedKey",
+                    "type": "BYTES"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "success",
+                    "type": "BOOL"
+                }
+            ]
+        },
+        {
+            "name": "trigger",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "switchId",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "success",
+                    "type": "BOOL"
+                }
+            ]
+        },
+        {
+            "name": "cancel",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "switchId",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "success",
+                    "type": "BOOL"
+                }
+            ]
+        },
+        {
+            "name": "updateBeneficiary",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "switchId",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "newBeneficiary",
+                    "type": "ADDRESS"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "success",
+                    "type": "BOOL"
+                }
+            ]
+        },
+        {
+            "name": "updateInterval",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "switchId",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "newInterval",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "success",
+                    "type": "BOOL"
+                }
+            ]
+        },
+        {
+            "name": "getSwitch",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "switchId",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "owner",
+                    "type": "ADDRESS"
+                },
+                {
+                    "name": "beneficiary",
+                    "type": "ADDRESS"
+                },
+                {
+                    "name": "interval",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "gracePeriod",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "lastCheckin",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "status",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "triggerBlock",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "chunkCount",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "getData",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "switchId",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "chunkIndex",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "data",
+                    "type": "BYTES"
+                }
+            ]
+        },
+        {
+            "name": "getDecryptionKey",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "switchId",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "encryptedKey",
+                    "type": "BYTES"
+                }
+            ]
+        },
+        {
+            "name": "getSwitchCount",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "count",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "isExpired",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "switchId",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "expired",
+                    "type": "BOOL"
+                }
+            ]
+        },
+        {
+            "name": "getSwitchesByOwner",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "owner",
+                    "type": "ADDRESS"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "count",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "switchIds",
+                    "type": "UINT256"
+                }
+            ]
+        }
+    ],
+    "events": []
+}

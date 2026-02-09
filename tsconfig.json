@@ -1,0 +1,9 @@
+{
+    "extends": "./node_modules/@btc-vision/assemblyscript/std/assembly.json",
+    "compilerOptions": {
+        "outDir": "./build"
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}

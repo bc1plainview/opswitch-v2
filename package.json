@@ -1,0 +1,22 @@
+{
+    "name": "dead-mans-switch-v2",
+    "version": "2.0.0",
+    "description": "Dead Man's Switch V2 - Multi-tenant factory pattern within a single OPNet smart contract. Allows any user to create and manage independent switches with encrypted data storage and heartbeat-based trigger mechanisms.",
+    "scripts": {
+        "build": "asc src/index.ts --config asconfig.json --target debug",
+        "clean": "rm -rf build/*"
+    },
+    "dependencies": {
+        "@btc-vision/as-bignum": "0.1.2",
+        "@btc-vision/btc-runtime": "1.11.0-rc.4"
+    },
+    "devDependencies": {
+        "@btc-vision/assemblyscript": "latest",
+        "@btc-vision/opnet-transform": "1.0.6"
+    },
+    "overrides": {
+        "bs58check": {
+            "@noble/hashes": "^1.6.1"
+        }
+    }
+}
