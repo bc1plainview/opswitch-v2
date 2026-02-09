@@ -1,10 +1,10 @@
 # Dead Man's Switch V2 - Multi-Tenant Factory
 
-A permissionless, multi-tenant Dead Man's Switch smart contract for OPNet (Bitcoin L1).
+A permissionless, multi-tenant Dead Man's Switch smart contract for OP_NET (Bitcoin L1).
 
 ## Overview
 
-V2 evolves from the single-switch V1 into a **factory pattern within a single contract**. Since OPNet contracts cannot deploy other contracts (no CREATE/CREATE2 opcodes), V2 manages multiple independent switches internally, each identified by a unique auto-incrementing `switchId`.
+V2 evolves from the single-switch V1 into a **factory pattern within a single contract**. Since OP_NET contracts cannot deploy other contracts (no CREATE/CREATE2 opcodes), V2 manages multiple independent switches internally, each identified by a unique auto-incrementing `switchId`.
 
 **Any user can create a switch — no admin required.**
 
