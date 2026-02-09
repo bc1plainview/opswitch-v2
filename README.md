@@ -1,6 +1,6 @@
 # Dead Man's Switch V2 - Multi-Tenant Factory
 
-A permissionless, multi-tenant Dead Man's Switch smart contract for OP_NET (Bitcoin L1).
+A permissionless, multi-tenant Dead Man's Switch smart contract on Bitcoin Layer 1 with OP_NET.
 
 ## Overview
 
